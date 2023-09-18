@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: calibri;
+    font-style: italic;
+    text-align: center;
+    background: rgb(39, 136, 227);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(39, 136, 227);
+}
+
+.main-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    line-height: 4rem;
+    background: white;
+    border-radius: .5rem;
+}
+
+h1 {
+    letter-spacing: .1rem;
+    color: rgb(39, 136, 227);
+}
+
+input {
+    padding: .3rem;
+    height: 2rem;
+    width: 20rem;
+    font-family: calibri;
+    font-size: 1rem;
+    border: .1rem solid rgb(190, 196, 201);
+    border-radius: .35rem;
+    outline: none;
+}
+
+input:focus {
+    border: .1rem solid rgb(39, 136, 227);
+}
+
+button {
+    padding: .3rem;
+    height: 3rem;
+    width: 21rem;
+    font-family: calibri;
+    font-weight: 600;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: .35rem;
+    background: rgb(39, 136, 227);
+    color: white;
+    transition: .2s;
+}
+
+button:hover {
+    background: rgb(68, 159, 243);
+}
+

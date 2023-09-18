@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contoh Form HTML</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .image-upload-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .image-upload-button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #fileInput {
+            display: none;
+        }
+
+        #previewImage {
+            max-width: 3000px;
+            max-height: 3000px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Form Contoh</h2>
+    <div class="image-upload-container">
+        <label for="fileInput" class="image-upload-button">Pilih Gambar</label>
+        <input type="file" id="fileInput" accept="image/*" onchange="previewImage(event)">
+        <img id="previewImage" alt="Belum ada gambar yang dipilih">
+    </div>
+
+    <script>
+        function previewImage(event) {
+            var fileInput = event.target;
+            var previewImage = document.getElementById('previewImage');
+
+            // Periksa apakah file telah dipilih
+            if (fileInput.files && fileInput.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    // Menampilkan gambar yang dipilih di elemen <img>
+                    previewImage.src = e.target.result;
+                };
+
+                reader.readAsDataURL(fileInput.files[0]);
+            } else {
+                // Jika tidak ada file yang dipilih, tampilkan gambar placeholder
+                previewImage.src = "#";
+            }
+        }
+    </script>
+</body>
+</html>
